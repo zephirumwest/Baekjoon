@@ -1,14 +1,8 @@
-🔍 Phase 3. 이분 탐색 / lower_bound
+ios::sync_with_stdio(false);
+cin.tie(0);
 
-목표: “정렬 + 탐색” 패턴
-
-10815 숫자 카드
-
-2805 나무 자르기
-
-👉 포인트
-
-lower_bound(v.begin(), v.end(), x)
+list.reserve(500000);
+list.max_load_factor(0.7);
 
 📚 Phase 4. 스택 / 큐
 
