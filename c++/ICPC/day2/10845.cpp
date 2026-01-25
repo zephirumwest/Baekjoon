@@ -8,12 +8,12 @@ int main(){
     int size = 0;
     cin >> N;
     string od;
-    vector<int> sk;
+    vector<int> q;
     for(int i = 0; i < N; i++){
         cin >> od;
         if(od == "push"){
             cin >> k;
-            sk.push_back(k);
+            q.push_back(k);
             size++;
         }
         else if (od == "pop"){
@@ -21,8 +21,8 @@ int main(){
                 cout << -1 << "\n";
             }
             else{
-                cout << sk[size-1] << "\n";
-                sk.pop_back();
+                cout << q[0] << "\n";
+                q.erase(q.begin());
                 size--;
             }
         }
@@ -33,14 +33,21 @@ int main(){
             if(size == 0) cout << 1 << "\n";
             else cout << 0 << "\n";
         }
-        else if(od == "top"){
+        else if(od == "front"){
             if(size == 0){
                 cout << -1 << "\n";
             }
             else{
-                cout << sk[size-1] << "\n";
+                cout << q[0] << "\n";
             }
-
+        }
+        else if(od == "back"){
+            if(size == 0){
+                cout << -1 << "\n";
+            }
+            else{
+                cout << q[size-1] << "\n";
+            }
         }
         
     }
